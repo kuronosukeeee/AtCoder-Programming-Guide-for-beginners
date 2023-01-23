@@ -21,7 +21,7 @@ int main() {
   }
   else if (!b || c) {
     cout << "Co";
-  
+  }
 
   if (a && b && c) {
     cout << "foo!";
