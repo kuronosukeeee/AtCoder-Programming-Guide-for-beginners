@@ -8,4 +8,4 @@ int main() {
   int diff = max(max(A, B), C) - min(min(A, B), C);
 
   cout << diff << endl;
-}
+}  
