@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+
   int keyValue;
   cin >> keyValue;
 
@@ -47,4 +48,5 @@ int main() {
   }
 
   cout << cnt2 << endl;
+  
 }
