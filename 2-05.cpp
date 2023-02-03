@@ -101,9 +101,19 @@ using namespace std;
 // x番の組織について、子組織からの報告書が揃った時刻を返す
 // childrenは組織の関係を表す2次元配列(参照渡し)
 int complete_time(vector<vector<int>> &children, int x) {
-  // (ここに追記して再帰関数を実装する)
+  if (children.at(x).size() == 0) {
+    return 0;
+  }
+
+  int max_receive_time = 0;
+
+  for (int c : children.at(x)) {
+    int receive_time = complete_time(children, c) + 1;
+    max_receive_time = max(max_receive_time, receive_time);
+  }
+  return max_receive_time;
 }
- 
+
 // これ以降の行は変更しなくてよい
  
 int main() {
