@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int ReceiveTime(vector<vector<int>> &, int);
+int ReceiveTime(vector<vector<int>>&, int);
 
 int main() {
   int n;
@@ -38,8 +38,10 @@ int ReceiveTime(vector<vector<int>> &children, int x) {
     int receiveTime = ReceiveTime(children, c) + 1;
     maxReceiveTime = max(receiveTime, maxReceiveTime);
   }
+
   return maxReceiveTime;
 }
+
 
 
 
