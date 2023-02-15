@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int ReceiveTime(vector<vector<int>>&, int);
+
 int main() {
   int n;
   cin >> n;
@@ -15,7 +17,7 @@ int main() {
 
   vector<vector<int>> children(n);
 
-  for (int i = 0; i < n; i++) {
+  for (int i = 1; i < n; i++) {
     int p;
     p = parent.at(i);
 
@@ -33,6 +35,10 @@ int ReceiveTime(vector<vector<int>> &children, int x) {
   int maxReceiveTime = 0;
 
   for (int c : children.at(x)) {
-
+    int receiveTime;
+    receiveTime = ReceiveTime(children, c) + 1;
+    maxReceiveTime = max(receiveTime, maxReceiveTime);
   }
+
+  return maxReceiveTime;
 }
